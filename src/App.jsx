@@ -391,7 +391,7 @@ function Gallery() {
           className="overflow-hidden rounded-[24px] md:rounded-[28px] border border-zinc-800 bg-zinc-900"
         >
           <img
-            src="/4.jpeg"
+            src="/product.jpeg"
             className="w-full h-[240px] sm:h-[280px] md:h-[340px] object-cover"
           />
         </motion.div>
@@ -401,7 +401,7 @@ function Gallery() {
 }
 
 function ChatProofs() {
-  const shots = [1, 2, 3, 4];
+  const shots = [7, 8, 9, 10, 11, 12];
 
   return (
     <section className="text-center">
@@ -413,25 +413,24 @@ function ChatProofs() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         {shots.map((item) => (
           <motion.div
-            whileHover={{ scale: 1.02 }}
             key={item}
-            className="bg-zinc-900 border border-dashed border-zinc-700 rounded-[24px] md:rounded-[28px] min-h-[280px] sm:min-h-[320px] flex flex-col items-center justify-center text-center p-6 md:p-8"
+            whileHover={{ scale: 1.02 }}
+            className="bg-zinc-900 border border-zinc-800 rounded-[24px] md:rounded-[28px] overflow-hidden"
           >
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-zinc-800 mb-5" />
-
-            <p className="text-lg sm:text-xl font-bold">
-              Customer Chat Screenshot
-            </p>
-
-            <p className="mt-3 text-zinc-500 leading-7 text-sm sm:text-base">
-              Replace with WhatsApp screenshots.
-            </p>
+            <img
+              src={`/${item}.jpeg`}
+              alt={`Customer chat ${item}`}
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
           </motion.div>
         ))}
       </div>
     </section>
   );
 }
+
+
 
 function TrustSection() {
   return (

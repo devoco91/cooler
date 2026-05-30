@@ -402,7 +402,7 @@ function Gallery() {
 }
 
 function ChatProofs() {
-  const shots = [7, 8, 9, 10, 11, 12];
+  const shots = [7, 8, 9, 10, 11, ];
 
   return (
     <section className="text-center">
